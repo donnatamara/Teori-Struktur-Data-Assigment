@@ -1,0 +1,1 @@
+# Teori-Struktur-Data-Assigment
