@@ -6,27 +6,26 @@
 
 ### 1. Terdapat tiga algoritma sorting yang umum digunakan yakni, Bubble Sort, Selection Sort, dan Merge Sort. Berikan penjelasan alur dari masing-masing algoritma tersebut, dan jelaskan runtime dari best case dan worst case masing-masing algoritma!
 
-#### Jawaban
 Algoritma sorting merupakan algoritma yang digunakan untuk meletakkan elemen-elemen data ke dalam urutan tertentu, berdasarkan satu atau beberapa kunci pada tiap elemennya. Sorting memiliki dua jenis pengurutan yaitu ascending pengurutan dari yang terkecil hingga ke terbesar dan descending pengurutan dari yang terbesar hingga yang terkecil.
 
-a. Bubble sort merupakan cara pengurutan dengan cara membandingkan elemen-elemen yang berdekatan dalam array dan menukar posisinya jika elemen yang di sebelah kiri lebih besar daripada elemen di sebeleah kanan. 
+a. _Bubble sort_ merupakan cara pengurutan dengan cara membandingkan elemen-elemen yang berdekatan dalam array dan menukar posisinya jika elemen yang di sebelah kiri lebih besar daripada elemen di sebeleah kanan. 
 
 Alur algortimanya yaitu ulangi seluruh elemen dalam array (kecuali elemen terakhir), kemudian bandingkan elemen ke-i dengan elemen ke-(i+1), jika elemen ke-i lebih besar, tukar posisisnya dengan elemen ke-(i+1), lalu ulangi langkah pertama dan kedua hingga tidak ada lagi pertukaran elemen.
 
 Runtime:
-- Best case: O(n), terjadi ketika array sudah terurut, sehingga tidak ada pertukaran elemen yang dilakukan.
+- _Best case_: O(n), terjadi ketika array sudah terurut, sehingga tidak ada pertukaran elemen yang dilakukan.
 
-- Worst case: O(n^2), terjadi ketika array terbalik, sehingga perlu melakukan banyak pertukaran elemen.
+- _Worst case_: O(n^2), terjadi ketika array terbalik, sehingga perlu melakukan banyak pertukaran elemen.
 
-b. Selection Sort merupakan cara pengurutan dengan cara membandingkan elemen sekarang dengan elemen berikutnya hingga elemen terakhir. 
+b. _Selection Sort_ merupakan cara pengurutan dengan cara membandingkan elemen sekarang dengan elemen berikutnya hingga elemen terakhir. 
 
 Alur algoritmanya adalah pertama temukan elemen terkecil dalam array, kedua tukar elemen terkecil dengan elemen pertama, terakhir ulangi langkah pertama dan kedua untuk elemen ke-2 hingga elemen terakhir.
 
 Runtime:
-- Best case: O(n), terjari ketika array sudah terurut, sehingga hanya perlu melakukan satu kali pertukaran elemen.
-- Worst case: O(n^2), terjadi ketika elemen dalam array tidak terurut secara acak, sehingga perlu melakukan banyak pencarian elemen terkecil.
+- _Best case_: O(n), terjari ketika array sudah terurut, sehingga hanya perlu melakukan satu kali pertukaran elemen.
+- _Worst case_: O(n^2), terjadi ketika elemen dalam array tidak terurut secara acak, sehingga perlu melakukan banyak pencarian elemen terkecil.
 
-c. Merge sort merupakan
+c. Merge sort merupakan algoritma sorting yang menggunakan teknik memecah belah untuk menyortir data. ALgoritma ini termasuk dalam kategori algoritma divide and conquer (pecah dan gabungkan).
 
 Alur algoritmanya:
 1. Jika array memiliki lebih dari satu elemen, bagi array menjadi dua bagian yang sama besar, kemudian urutkan kedua bagian secara rekursif menggunakan merge sort, lalu gabungkan kedua bagian ynag sudah terurut.
