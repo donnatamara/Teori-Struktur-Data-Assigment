@@ -8,7 +8,7 @@
 
 Algoritma Searching dapat disebut sebuah proses pencarian suatu data dalam array dengan cara mengecek satu demi satu pada setiap indeks bari atau setiap indeks kolomnya dengan menggunakan teknik perulangan untuk melakukan pencarian data.
 
-a. Binary search, merupakan sebuah teknik pencarian pada array/list dengan elemen terurut dengan menghapus bagian data pada setiap langkah, dengan cara menentukan nilai tengah (median) dari data, lalu melakukan perbandingan untuk menentukan apakah nilai yang dicari berada pada sebelum atau sesudahnya, serta menentukan bagian lainnya dengan cara yang sama. Algortima ini hanya bekerja pada data yang sudah terurut.
+**a. Binary search**, merupakan sebuah teknik pencarian pada array/list dengan elemen terurut dengan menghapus bagian data pada setiap langkah, dengan cara menentukan nilai tengah (median) dari data, lalu melakukan perbandingan untuk menentukan apakah nilai yang dicari berada pada sebelum atau sesudahnya, serta menentukan bagian lainnya dengan cara yang sama. Algortima ini hanya bekerja pada data yang sudah terurut.
 
 Alur algoritmanya, pertama bagi data menjadi dua bagian, lalu bandingkan dengan elemen yang dicari dengan elemen di tengah, jika sama maka elemen ditemukan dan program akan berhenti, jika lebih kecil program akan mencari lagi di bagian kiri, jika lebih besar program akan mencari di bagian kanan, proses tersebut diulangi hingga elemen yang ditemukan dengan memeriksa seluruh data dalam suatu array/list.
 
@@ -16,7 +16,7 @@ Runtime:
 - Best case, O(1), elemen ditemukan pada percobaan pertama (elemen tepat di tengah).
 - Worst case, O(log n), elemen tidak ditemukan dan seluruh data terperiksa (elemen ada di ujung atau tidak ada sama sekali).
 
-b. Linear search, merupakan algoritma untuk menemukan data tertentu dalam kumpulan data dengan cara memeriksa semua elemen data satu per satu. Namun, untuk kumpulan data besar, linear search menjadi kurang efisien dibandingkan dengan algoritma pencarian lainnya seperti binary search. Algoritma ini dapat bekerja pada data terurut maupun tidak terurut.
+**b. Linear search**, merupakan algoritma untuk menemukan data tertentu dalam kumpulan data dengan cara memeriksa semua elemen data satu per satu. Namun, untuk kumpulan data besar, linear search menjadi kurang efisien dibandingkan dengan algoritma pencarian lainnya seperti binary search. Algoritma ini dapat bekerja pada data terurut maupun tidak terurut.
 
 Alur algoritmanya, pertma periksa setiap elemen data satu per satu, bandingkan dengan elemen yang dicari, jika sama maka elemen ditemukan dan program berhenti, jika berbeda maka program akan melanjutkan ke elemen berikutnya, proses tersebut diulang hingga elemen yang dicari ditemukan atau seluruh data diperiksa.
 
@@ -71,6 +71,8 @@ int main() {
   return 0;
 }
 ```
+Kode di atas adalah kode program yang menggunakan algoritma pencarian sequential search. Pertama, array `arr` dengan anggotanya dan nilai yang dicari didefinisikan. Kemudian, jumlah elemen `n` dihitung dengan `sizeof(arr) / sizeof(arr[0])`, menghasilkan `5`. Fungsi `sequentialSearch` mengembalikan indeks nilai yang dicari atau `-1` jika tidak ditemukan, variabel `index` juga diinisialisasi dengan `-1`, dan loop `for` digunakan untuk memeriksa setiap elemen dalam array. Jika `index` diubah menjadi `i` dan loop dihentikan. Hasil pencariannya dikembalikan ke fungsi `main` lalu program akan menampilkan hasilnya dengan pesan "Nilai 34 ditemukan pada indeks ke-2" jika ditemukan atau "Nilai 34 tidak ditemukan dalam array" jika tidak ditemukan.
+
 
 ### 3. Tulislah sebuah fungsi program dengan kondisi sebagai berikut: Terdapat sebuah sorted array of strings yang mana terdapat string kosong diantaranya, carilah lokasi/indeks dari kata yang dicari! 
 
