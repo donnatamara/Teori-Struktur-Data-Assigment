@@ -95,45 +95,49 @@ Iterasi pertama berjalan dari elemen pertama hingga elemen terakhir array. Lalu,
 
 using namespace std;
 
-bool isAnagram(string s1, string s2) {
-  // Mengubah kedua string menjadi huruf kecil dan menghapus spasi
+bool isAnagram(string s1, string s2)
+{
+  // Konversi string menjadi lowercase dan hapus spasi
   transform(s1.begin(), s1.end(), s1.begin(), ::tolower);
   s1.erase(remove(s1.begin(), s1.end(), ' '), s1.end());
 
   transform(s2.begin(), s2.end(), s2.begin(), ::tolower);
   s2.erase(remove(s2.begin(), s2.end(), ' '), s2.end());
 
-  // Mengurutkan kedua string
+  // Sort kedua string
   sort(s1.begin(), s1.end());
   sort(s2.begin(), s2.end());
 
-  // Membandingkan string yang telah diurutkan
-  if (s1 == s2) {
-    return true; // Anagram
-  } else {
-    return false; // Tidak anagram
+  // Bandingkan string yang telah diurutkan
+  for (int i = 0; i < s1.length(); i++)
+  {
+    if (s1[i] != s2[i])
+    {
+      return false; // Bukan anagram
+    }
   }
+
+  return true; // Merupakan anagram
 }
 
-int main() {
-  // Deklarasi dan inisialisasi array of strings
-  string str1[] = {"aku", "ini", "contoh"};
-  string str2[] = {"aku", "ini", "contoh"};
+int main()
+{
+  // Input dua string
+  string str1, str2;
+  cout << "Masukkan string pertama: ";
+  getline(cin, str1);
 
-  // Menentukan jumlah elemen array
-  int n1 = sizeof(str1) / sizeof(str1[0]);
-  int n2 = sizeof(str2) / sizeof(str2[0]);
+  cout << "Masukkan string kedua: ";
+  getline(cin, str2);
 
-  // Mengulangi setiap elemen array
-  for (int i = 0; i < n1; i++) {
-    for (int j = 0; j < n2; j++) {
-      // Memeriksa apakah dua string adalah anagram
-      if (isAnagram(str1[i], str2[j])) {
-        cout << str1[i] << " dan " << str2[j] << " adalah anagram" << endl;
-      } else {
-        cout << str1[i] << " dan " << str2[j] << " bukan anagram" << endl;
-      }
-    }
+  // Periksa apakah string adalah anagram
+  if (isAnagram(str1, str2))
+  {
+    cout << str1 << " dan " << str2 << " adalah anagram." << endl;
+  }
+  else
+  {
+    cout << str1 << " dan " << str2 << " bukan anagram." << endl;
   }
 
   return 0;
