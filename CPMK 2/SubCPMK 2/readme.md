@@ -79,6 +79,12 @@ int main() {
   return 0;
 }
 ```
+Kode diatas adalah kode program yang menggunakan algoritma selection sort untuk mengurutkan sebuah array.
+
+Pertama, program akan mendeklarasikan array `arr` yang akan diurutkan dan menghitung jumlah elemen dalam array(`n`). Kemudian, program menampilkan isi array sebelum proses pengurutan dimulai, proses pengurutan dilakukan oleh fungsi `selectionSort` yang menerima array dan jumlah elemennya sebagai parameter. 
+
+Iterasi pertama berjalan dari elemen pertama hingga elemen terakhir array. Lalu, program akan menentukan indeks elemen terkecil pada setiap iterasinya menggunakan fungsi `minIndex`. Iterasi kedua kemudian berjalan dari elemen setelah indeks saat ini hingga elemen terakhir untuk mencari elemen terkecil. Jika elemen yang lebih kecil ditemukan, `minIndex` akan terganti dengan nilai indeks elemen tersebut. Setelah iterasi kedua selesai, jika `minIndex` bukan indeks saat ini, elemen di indeks saat ini ditukar dengan elemen di `minIndex`, penukaran tersebut untuk memastikan elemen terkecil dari bagian array yang belum terurut ditempatkan di posisi `i`. Program akan mengulangi hingga elemen array terurut dan mengembalikan nilai 0 tanda program telah selesai dijalankan.
+
 
 ### 3. Tulislah sebuah fungsi untuk mensorting dan mengecek dua buah array of strings, sehingga menghasilkan “anagram” dan “tidak anagram”
 
