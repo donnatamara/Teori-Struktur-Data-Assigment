@@ -84,7 +84,7 @@ int main()
   return 0;
 }
 ```
-Kode di atas adalah kode program yang menggunakan algoritma pencarian binary search untuk mencari elemen dalam array yang sudah diurutkan. Pertama, program mendefiniskan indeks kiri (left) ke 0 dan indeks kanan (right) ke ukuran array minus 1, kemudian menghitung indeks tengah sebagai rata-rata dari `left` dan `right`. Elemen pada indeks tengah dibandingkan dengan nilai target. Jika sama, maka indeks tengah dikembalikan. Jika lebih besar, bagian kiri array diabaikan. Jika lebih kecil, bagian kanan array diabaikan. Proses ini diulang hingga elemen ditemukan atau seluruh array telah diperiksa. Jika elemen tidak ditemukan -1 dikembalikan. 
+Kode di atas adalah kode program yang menggunakan algoritma pencarian binary search untuk mencari elemen dalam array yang sudah diurutkan. Pertama, program mendefiniskan indeks kiri (left) ke 0 dan indeks kanan (right) ke ukuran array minus 1, kemudian menghitung indeks tengah sebagai rata-rata dari `left` dan `right`. Elemen pada indeks tengah dibandingkan dengan nilai target. Jika sama, maka indeks tengah dikembalikan. Jika lebih besar, bagian kiri array diabaikan. Jika lebih kecil, bagian kanan array diabaikan. Proses ini diulang hingga elemen ditemukan atau seluruh array telah diperiksa. Jika elemen tidak ditemukan -1 dikembalikan serta mencetak pesan "Elemen tidak ditemukan". 
 
 ### 3. Tulislah sebuah fungsi program dengan kondisi sebagai berikut: Terdapat sebuah sorted array of strings yang mana terdapat string kosong diantaranya, carilah lokasi/indeks dari kata yang dicari! 
 
