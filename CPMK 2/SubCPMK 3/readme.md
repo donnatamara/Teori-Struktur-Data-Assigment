@@ -31,48 +31,60 @@ Kesimpulannya, binary search lebih efisien untuk data terurut karena runtimenya 
 
 ```C++
 #include <iostream>
-
 using namespace std;
 
-// Fungsi pencarian dengan algoritma Sequential Search
-int sequentialSearch(int arr[], int n, int x) {
-  // Menginisialisasi variabel untuk menampung indeks elemen yang ditemukan
-  int index = -1;
+// Fungsi untuk melakukan binary search
+int binarySearch(int arr[], int size, int target)
+{
+  int left = 0;
+  int right = size - 1;
 
-  // Melakukan perulangan untuk setiap elemen dalam array
-  for (int i = 0; i < n; i++) {
-    // Memeriksa apakah elemen saat ini sama dengan nilai yang dicari
-    if (arr[i] == x) {
-      // Jika ditemukan, ubah variabel index dan hentikan perulangan
-      index = i;
-      break;
+  while (left <= right)
+  {
+    int middle = left + (right - left) / 2; // Menghindari overflow
+
+    // Jika elemen di tengah adalah target
+    if (arr[middle] == target)
+    {
+      return middle;
+    }
+
+    // Jika target lebih besar, abaikan bagian kiri
+    if (arr[middle] < target)
+    {
+      left = middle + 1;
+    }
+    // Jika target lebih kecil, abaikan bagian kanan
+    else
+    {
+      right = middle - 1;
     }
   }
 
-  // Mengembalikan indeks elemen yang ditemukan, atau -1 jika tidak ditemukan
-  return index;
+  // Jika target tidak ditemukan
+  return -1;
 }
 
-int main() {
-  // Contoh penggunaan fungsi sequentialSearch
-  int arr[] = {10, 22, 34, 45, 56};
-  int n = sizeof(arr) / sizeof(arr[0]); // Menentukan jumlah elemen array
-  int x = 34; // Nilai yang ingin dicari
+int main()
+{
+  int arr[] = {2, 3, 4, 10, 40};
+  int size = sizeof(arr) / sizeof(arr[0]);
+  int target = 10;
+  int result = binarySearch(arr, size, target);
 
-  int index = sequentialSearch(arr, n, x);
-
-  // Menampilkan hasil pencarian
-  if (index != -1) {
-    cout << "Nilai " << x << " ditemukan pada indeks ke-" << index << endl;
-  } else {
-    cout << "Nilai " << x << " tidak ditemukan dalam array" << endl;
+  if (result != -1)
+  {
+    cout << "Elemen ditemukan pada indeks: " << result << endl;
+  }
+  else
+  {
+    cout << "Elemen tidak ditemukan" << endl;
   }
 
   return 0;
 }
 ```
-Kode di atas adalah kode program yang menggunakan algoritma pencarian sequential search. Pertama, array `arr` dengan anggotanya dan nilai yang dicari didefinisikan. Kemudian, jumlah elemen `n` dihitung dengan `sizeof(arr) / sizeof(arr[0])`, menghasilkan `5`. Fungsi `sequentialSearch` mengembalikan indeks nilai yang dicari atau `-1` jika tidak ditemukan, variabel `index` juga diinisialisasi dengan `-1`, dan loop `for` digunakan untuk memeriksa setiap elemen dalam array. Jika `index` diubah menjadi `i` dan loop dihentikan. Hasil pencariannya dikembalikan ke fungsi `main` lalu program akan menampilkan hasilnya dengan pesan "Nilai 34 ditemukan pada indeks ke-2" jika ditemukan atau "Nilai 34 tidak ditemukan dalam array" jika tidak ditemukan.
-
+Kode di atas adalah kode program yang menggunakan algoritma pencarian binary search. Pertama, 
 
 ### 3. Tulislah sebuah fungsi program dengan kondisi sebagai berikut: Terdapat sebuah sorted array of strings yang mana terdapat string kosong diantaranya, carilah lokasi/indeks dari kata yang dicari! 
 
