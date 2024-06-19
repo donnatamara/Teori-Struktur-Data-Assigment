@@ -6,8 +6,11 @@
 
 ### 1. Berikan penjelasan dan contoh program (beserta penjelasan alur program) dari masing-masing materi struktur data berikut:
 a.	Priority Queue
+
 b.	Hash Table
+
 c.	Rekursif
+
 d.	Graph & Tree
 
 ## Jawaban:
@@ -214,7 +217,9 @@ Hash Table adalah sebuah struktur data yang dapat digunakan untuk mengambil dan 
 Hash table memiliki beberapa operasi yaitu:
 - Insertion, digunakan untuk memasukkan sebuah data baru ke dalam tabel hash.
 - Deletion, digunakan untuk menghapus data pada hash table.
-- Searching 
+- Searching, mencari data dalam hash table dan mencari data di dalam bucker yang sesuai.
+- Update, memperbarui data dalam hash table lalu memperbarui data yang ditemukan.
+- Traversal, melalui seluruh hush table untuk memproses semua data yang ada dalam tabel.
  
 ```C++
 #include <iostream>
@@ -384,7 +389,12 @@ Pertama, program akan membuat kelas `HashNode` yang digunakan untuk merepresenta
 
 
 ### Rekursif
-Rekursif adalah sebuah fungsi yang dapat memanggil dirinya sendiri secara langsung atau tidak langsung [6]. 
+Rekursif adalah sebuah fungsi yang dapat memanggil dirinya sendiri secara langsung atau tidak langsung [6]. Pemanggilan prosedur atau fungsi dari dirinya sendiri dapat berarti jika proses yang berulang tidak bisa diketahui kapan akan berakhir [6].
+
+- Rekursif langsung (Direct Recursion), fungsinya secara langsung memanggil dirinya sendiri [6]. Rekursi ini biasanya digunakan dalam pemrograman untuk menyelesaikan masalah yang dapat direduksi menjadi masalah serupa yang lebih kecil. Rekursi ini juga dapat membuat kode menjadi lebih ringkas dan simpel ketika digunakan dengan baik, namun perlu diingat untuk menghindari rekursi yang tak hingga yang dapat menyebabkan StackOverFlowError [7].
+  
+- Rekursif tidak langsung (Indirect Recursion), terjadi ketika fungsi A memanggil fungsi B, dan fungsi B memanggil kembali ke fungsi A maka itu melibatkan rekursi tidak langsung [6]. Rekursi ini merupakan fungsi yang memanggil fungsi lain dengan cara memanggil fungsi rekursif lain, bukan fungsi itu sendiri. Rekursi ini digunakan untuk menyelesaikan masalah yang lebih kompleks yang tidak dapat diselesaikan oleh rekursif langsung.
+
 ```C++
 #include <iostream>
 using namespace std;
@@ -429,7 +439,25 @@ Program dimulai dari pemanggilan fungsi `main`, di mana variabel `angka` didekla
 
 
 ### Graph & Tree 
-Graph and Tree adalah
+Graph adalah sebuah struktur data yang didalamnya terdapat set objek (simpul datu vertex) dan terhubung oleh satu set sambungan (sisi atau edge). Graf dapat disebut juga sebagai pasangan himpunan (V, E), di mana V sebagai himpunan simpul dan E sebagai himpunan sisi. Pada setiap sisi e di E menghubungkan dua simpul yang berbeda u dan v di V[8].
+
+Ada beberapa jenis graph:
+- Graph berarah (directed graph), di mana setiap sisinya memiliki arah sehingga sisi (u, v) berbeda dengan sisi (v, u) [8].
+- Graph tak berarah (undirected graph), di mana setiap sisinya tidak memiliki arah, sehingga sisi (u, v) sama dengan sisi (v, u) [8].
+- Graph berbobot (weighted graph), di mana setiap sisinya memiliki bobot atau nilai numerik yang menyatakan biaya atau jarak [8].
+
+Tree Merupakan sebuah struktur data hierarki, terdiri dari node-node yang saling terhubung. Pada setiap tree terdapat node khusus yang disebut dengan root node. Selain root node, tree juga memiliki node-node lain yang disebut shild node. Serta child node yang tidak memiliki child nodenya sendiri disebuh leaf node [9].
+
+Ada beberapa operasi pada tree diantaranya adalah:
+- Create, untuk membentuk binary tree baru yang masih kosong.
+- Clear, untuk menghapus semua node pada binary tree.
+- Retive, untuk mengetahui isi dari node yang ditunjuk pointer current.
+- isEMpty, untuk memeriksa apakah binary tree masih kosong atau tidak.
+- Delete, menghapus sebuah subtree yang ditunjuk pointer current.
+- Insert, untuk memasukkan sebuah node kedalam tree.
+- Find, untuk mencari root, parent, left child, atau right child dari suatu node.
+- Characteristic, mengetahui karakteristik dari suatu tree.
+- Traverse, mengunjungi seluruh node-node pada tree dengan cara traversal.
 
 ```C++
 #include <iostream>
@@ -516,3 +544,9 @@ Pertama, program akan mendeklarasikan konstanta `max_simpul` untuk menentukan ju
 [5] J. Carey, S. Doshi, and P. Rajan, C++ Data structures and algorithm design principles: Leverage the power of modern C++ to build robust and scalable applications. Packt Publishing Ltd, 2019.
 
 [6] S. H. S. Kom. MT and I. W. J. S. Kom. MCs, Konsep Algoritme dan Aplikasinya dalam Bahasa Pemrograman C++. Penerbit Andi, 2020.
+
+[7] R. Firliana, R. Rina, dan P. Kasih, "Struktur Data yang Terorganisir," dalam Algoritma dan Pemrograman C++, Adjie Media Nusantara, 2019.
+
+[8] T. H. Cormen, C. E. Leiserson, R. L. Rivest, and C. Stein, Introduction to Algorithms, fourth edition. MIT Press, 2022.
+
+[9] Y. Kanetkar, Data Structures through C++: Experience Data Structures C++ through animations. BPB Publications, 2019.
