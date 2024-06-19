@@ -377,6 +377,11 @@ int main()
 }
 ```
 #### Interpretasi
+Kode di atas adalah kode program yang menggunakan algoritma tabel hash dengan penanganan tabrakan menggunakan chaining (linked list). 
+
+Pertama, program akan membuat kelas `HashNode` yang digunakan untuk merepresentasikan node dengan atribut `key`, `value`, dan , `next`. Kelas `HashTable` berisi array pointer `table` yang diinisialisasi dengan ukuran tetap 10. Fungsi `insert` digunakan untuk menambahkan pasangan key-value ke dalam table hash, menggunakan fungsi hash (`key % TABLE_SIZE`) untuk menentukan indeks pada elemennya, dan menangani tabrakan dengan linked list. Fungsi `serach` digunakan untuk mencari nilai berdasarkan key dengan memeriksa linked list di indeks yang sesuai. Fungsi `remove` digunakan untuk menghapus node dengan key tertentu dari linked list. Dalam fungsi `main`, beberapa key dan value ditambahkan, dicari, dan dihapus untuk memperlihatkan penggunaan tabel hash. Kemudian, destruktor membersihkan memori dengan menghapus semua node dari linked list di setiap indeks tabel hash. Program akan mengembalikan nilai 0 yang mana program telah berjalan dengan sukses.
+
+
 
 ### Rekursif
 Rekursif adalah sebuah fungsi yang dapat memanggil dirinya sendiri secara langsung atau tidak langsung [6]. 
@@ -420,6 +425,8 @@ int main()
 Kode di atas adalah kode program untuk menghitung faktorial dari sebuah bilangan bulat positif menggunakan fungsi rekursif.
 
 Program dimulai dari pemanggilan fungsi `main`, di mana variabel `angka` dideklarasikan untuk menyimpan inputan dari pengguna. Pengguna diminta memasukkan bilang bulat positif. Jika `angka` bernilai negatif, program akan menampilkan pesan error dan program berhenti berjalan. Jika `angka` yang dimasukkan benar, maka program akan memanggil fungsi rekursif `faktorial` untuk menghitung faktorial dari `angka`. Fungsi `faktorial` memiliki basis rekursi yang mengembalikan `1` jika `n <= 1, memanggil dirinya sendiri hingga mecapai basis rekursi. Setelah menghitung faktorial, hasil disimpan dalam variabel `hasil` dan ditampilkan kepada pengguna. Program kemudian akan mengembalikan nilai 0 jika program telah selesai dijalankan. 
+
+
 
 ### Graph & Tree 
 Graph and Tree adalah
@@ -491,6 +498,9 @@ int main()
 }
 ```
 #### Interpretasi
+Kode di atas adalah kode program yang dapat memasukkan dan menampilkan matriks bobot antar simpul kota dari inputan pengguna. Program ini memiliki tiga fungsi utama yaitu `inputSimpul`, `inputBobot`,`tampilkanMatriks`, serta fungsi `main`.
+
+Pertama, program akan mendeklarasikan konstanta `max_simpul` untuk menentukan jumlah maksimum simpul (10). Program memiliki tiga fungsi utama yaitu `inputSimpul`, `inputBobot`, dan `tampilkanMatriks`. Fungsi `inputSimpul` meminta pengguna untuk memasukkan nama simpul dan menyimpannya dalam sebuah array dua dimensi `simpul_kota`. Fungsi `inputBobot` meminta pengguna untuk memasukkan bobot antar simpul dan menyimpannya dalam array dua dimensi `bobot`. Fungsi `tampilkanMatriks` menampilkan matriks bobot dalam format utama tabel dengan nama simpul sebagai header baris dan kolom. Pada fungsi `main` meminta pengguna untuk memasukkan jumlah simpul, mendeklarasikan array untuk menyimpan nama simpul dan bobot, lalu memanggil fungsi `inputSimpul`, `inputBobot`, dan `tampilkanMatriks` secara berurutan untuk mengisi dan menampilkan data yang dimasukkan pengguna, kemudian program selesai dijalnkan setelah menampilkan matriks bobot dan mengembalikan nilai 0 yang mana program telah sukses berjalan. 
 
 
 
