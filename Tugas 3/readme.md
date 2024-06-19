@@ -203,6 +203,10 @@ int main()
     return 0;
 }
 ```
+#### Interpretasi
+Kode di atas adalah kode program yang menggunakan sebuah max Heap atau priority queue.
+
+Pertama, program akan membaca jumlah elemen dan memeriksa apakah jumlah ini melebihi kapasitas maksimum heap. Elemen-elemen dimasukkan ke dalam heap menggunakan fungsi `insert`, dan kemudian program akan menampilan semua elemen dalam heap. Elemen dengan prioritas tertinggi dikeluarkan menggunakan fungsi `extractMax`, dan hasilnya ditampilkan bersama dengan heap yang diperbarui. Program juga mengubah prioritas elemen tertentu menggunakan fungsi `changePriority` dan menghapus elemen tertentu menggunakan fungsi `remove`, dengan hasil setiap operasi ditampilkan. Fungsi-fungsi utama termasuk `insert` untuk menambahkan elemen, `extractMax` untuk mengeluarkan elemen maksimum, `changePriority` digunakan untuk mengubah prioritas elemen, dan `remove` digunakan untuk menghapus elemen, memastikan max heap selalu terjaga melalui operasi `shiftup` dan `shiftDown`.
 
 ### Hash Table 
 Hash Table adalah sebuah struktur data yang dapat digunakan untuk mengambil dan menyimpan data menggunakan sebuah key yang unik [4]. Hash table merupakan fungsi yang merepresentasikan setiap nilai dengan sebuah key unik, lalu menggunakan kunci yang sama untuk memeriksa lokasi kuncinya untuk mengambil nilai yang sesuai, tergantung penggunaannya [5].
@@ -372,6 +376,7 @@ int main()
     return 0;
 }
 ```
+#### Interpretasi
 
 ### Rekursif
 Rekursif adalah sebuah fungsi yang dapat memanggil dirinya sendiri secara langsung atau tidak langsung [6]. 
@@ -411,6 +416,10 @@ int main()
     return 0;
 }
 ```
+#### Interpretasi
+Kode di atas adalah kode program untuk menghitung faktorial dari sebuah bilangan bulat positif menggunakan fungsi rekursif.
+
+Program dimulai dari pemanggilan fungsi `main`, di mana variabel `angka` dideklarasikan untuk menyimpan inputan dari pengguna. Pengguna diminta memasukkan bilang bulat positif. Jika `angka` bernilai negatif, program akan menampilkan pesan error dan program berhenti berjalan. Jika `angka` yang dimasukkan benar, maka program akan memanggil fungsi rekursif `faktorial` untuk menghitung faktorial dari `angka`. Fungsi `faktorial` memiliki basis rekursi yang mengembalikan `1` jika `n <= 1, memanggil dirinya sendiri hingga mecapai basis rekursi. Setelah menghitung faktorial, hasil disimpan dalam variabel `hasil` dan ditampilkan kepada pengguna. Program kemudian akan mengembalikan nilai 0 jika program telah selesai dijalankan. 
 
 ### Graph & Tree 
 Graph and Tree adalah
@@ -481,8 +490,9 @@ int main()
     return 0;
 }
 ```
+#### Interpretasi
 
-## Kesimpulan
+
 
 ## Referensi
 [1] Goponenko, A., & Carroll, S. "A C++ implementation of a lock-free priority queue based on Multi-Dimensional Linked List". Link: https://www.researchgate.net/publication/337020321_A_C_Implementation_of_a_Lock-Free_Priority_Queue_Based_on_Multi-Dimensional_Linked_List. 2019.
